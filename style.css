@@ -1,0 +1,101 @@
+/* Hero Section Full Screen + Gradient */
+.hero-section {
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+/* Hero Profile Image Floating + Hover */
+.hero-img-wrapper {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.hero-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  animation: float 3s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hero-img:hover {
+  transform: scale(1.15) rotate(-5deg);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(90deg, #f39c12, #e74c3c, #f1c40f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hero Headline */
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* Hero Subheadline */
+.hero-sub {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.hero-btn, .hero-btn-outline {
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+}
+.hero-btn {
+  background: linear-gradient(45deg, #f39c12, #e74c3c);
+  color: #fff;
+}
+.hero-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+.hero-btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+}
+.hero-btn-outline:hover {
+  background: rgba(255,255,255,0.15);
+  transform: scale(1.05);
+}
+
+/* Floating Shapes / Particles */
+.floating-shapes span {
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  animation: floatShapes 6s linear infinite;
+}
+.floating-shapes span:nth-child(1){top:10%; left:15%; animation-delay:0s;}
+.floating-shapes span:nth-child(2){top:25%; left:70%; animation-delay:1s;}
+.floating-shapes span:nth-child(3){top:50%; left:40%; animation-delay:2s;}
+.floating-shapes span:nth-child(4){top:70%; left:80%; animation-delay:3s;}
+.floating-shapes span:nth-child(5){top:85%; left:30%; animation-delay:4s;}
+
+@keyframes floatShapes {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-25px) rotate(180deg); }
+  100% { transform: translateY(0px) rotate(360deg); }
+}

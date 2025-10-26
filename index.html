@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Portfolio</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#hero">HALIMA AKTER</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navmenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Hero Section -->
+<section id="hero" class="hero-section d-flex align-items-center justify-content-center text-center text-white">
+  <div class="container">
+    
+    <!-- Profile Image -->
+    <div class="hero-img-wrapper">
+      <img src="assets/images/image.png" class="hero-img" alt="Halima Akter">
+    </div>
+
+    <!-- Headline -->
+    <h1 class="hero-title animate__animated animate__fadeInUp">
+      Hi, I’m <span class="gradient-text">Halima Akter</span>
+    </h1>
+
+    <!-- Subheadline -->
+    <p class="hero-sub animate__animated animate__fadeInUp animate__delay-1s">
+      Crafting <span class="gradient-text">&lt;Modern & Interactive Web Experiences&gt;</span>
+    </p>
+
+    <!-- Call-to-Action Buttons -->
+    <div class="hero-btns animate__animated animate__fadeInUp animate__delay-2s">
+      <a href="#projects" class="btn btn-lg hero-btn">View My Work</a>
+      <a href="#contact" class="btn btn-lg hero-btn-outline">Contact Me</a>
+    </div>
+
+    <!-- Floating Shapes / Particles -->
+    <div class="floating-shapes">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+</section>
+
+
+<!-- 🌟 About Section (Animated + Dark Mode + Wave Divider) -->
+<section id="about" class="about-section py-5 text-dark">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+      <!-- Left: Cartoon Animation -->
+      <div class="col-md-5 text-center">
+        <lottie-player
+          src="https://assets6.lottiefiles.com/packages/lf20_pprxh53t.json"
+          background="transparent"
+          speed="1"
+          style="width: 220px; height: 220px;"
+          loop
+          autoplay
+        ></lottie-player>
+      </div>
+
+      <!-- Right: Info -->
+      <div class="col-md-7">
+        <h2 class="display-5 fw-bold animate__animated animate__fadeInUp">About Me</h2>
+        <p class="lead animate__animated animate__fadeInUp animate__delay-1s">
+          Hi, I'm <strong>Halima Akter</strong> — a passionate web developer and designer who loves creating 
+          modern, responsive, and interactive web experiences that bring ideas to life.
+        </p>
+        <p class="animate__animated animate__fadeInUp animate__delay-1s">
+          I focus on clean UI, smooth UX, and performance optimization. 
+          I enjoy working with modern frameworks and turning creative designs into functional products.
+        </p>
+
+        <ul class="about-list">
+          <li>💻 <strong>Expertise:</strong> Spring Boot, Flutter, Node.js, Angular, JavaScript</li>
+          <li>🎨 <strong>Focus:</strong> UI/UX, Animation, Responsive Design</li>
+          <li>🛠 <strong>Tools:</strong> VS Code, Figma, Git, Postman etc</li>
+        </ul>
+
+        <div class="mt-4 d-flex gap-3">
+          <a href="/cv/cv.pdf" download class="btn btn-primary px-4">Download CV</a>
+          <a href="#contact" class="btn btn-outline-secondary px-4">Hire Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 320"><path fill="#0d6efd" fill-opacity="1" d="M0,256L48,224C96,192,192,128,288,112C384,96,480,128,576,154.7C672,181,768,203,864,186.7C960,171,1056,117,1152,90.7C1248,64,1344,64,1392,64L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+  </div>
+</section>
+
+<!-- 🌈 Styles -->
+<style>
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+  
+  .about-section {
+    background: var(--light-bg, #f8f9fa);
+    position: relative;
+    transition: background 0.4s, color 0.4s;
+  }
+
+  .about-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+
+  .about-list li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    opacity: 0.9;
+    transition: transform 0.3s ease, opacity 0.3s;
+  }
+
+  .about-list li:hover {
+    transform: translateX(5px);
+    opacity: 1;
+  }
+
+  .btn {
+    border-radius: 30px;
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(13, 110, 253, 0.3);
+  }
+
+  /* 🌒 Dark Mode */
+  @media (prefers-color-scheme: dark) {
+    .about-section {
+      background: #121212;
+      color: #e9ecef;
+    }
+    .wave-divider path {
+      fill: #1e1e1e;
+    }
+    .btn-outline-secondary {
+      color: #e9ecef;
+      border-color: #e9ecef;
+    }
+  }
+
+  /* 🌊 Wave Divider */
+  .wave-divider svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    .about-section .display-5 {
+      font-size: 1.8rem;
+    }
+  }
+</style>
+
+<!-- 🧩 Lottie Player Script -->
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Projects Section -->
+<section id="projects" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Projects</h2>
+    <div class="row g-4 justify-content-center">
+
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card shadow-lg border-0 project-card text-center p-4">
+          <!-- Icon centered -->
+          <div class="icon-circle mx-auto mb-3">
+            <i class="fas fa-hospital fa-3x text-white"></i>
+          </div>
+          <!-- Title -->
+          <h5 class="card-title mb-2">Hospital Management System</h5>
+          <!-- Description -->
+          <p class="card-text mb-3">Complete hospital management using Spring Boot & Angular.</p>
+          <!-- GitHub Button -->
+          <a href="https://github.com/halimashemanto/Hospital-Management-System-Using-SpringBoot-Angular" class="btn btn-dark btn-sm">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card shadow-lg border-0 project-card text-center p-4">
+          <div class="icon-circle mx-auto mb-3">
+            <i class="fas fa-procedures fa-3x text-white"></i>
+          </div>
+          <h5 class="card-title mb-2">Hospital Management System</h5>
+          <p class="card-text mb-3">Complete hospital management using Spring Boot & Flutter.</p>
+          <a href="https://github.com/halimashemanto/Flutter" class="btn btn-dark btn-sm">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card shadow-lg border-0 project-card text-center p-4">
+          <div class="icon-circle mx-auto mb-3">
+            <i class="fas fa-user-md fa-3x text-white"></i>
+          </div>
+          <h5 class="card-title mb-2">Hospital Management System</h5>
+          <p class="card-text mb-3">Complete hospital management using Angular.</p>
+          <a href="https://github.com/halimashemanto/Hospital-Management-Angular" class="btn btn-dark btn-sm">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+  /* Card hover effect */
+  .project-card {
+    border-radius: 15px;
+    transition: transform 0.4s, box-shadow 0.4s, background 0.4s;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    cursor: pointer;
+  }
+
+  .project-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  }
+
+  /* Icon circle */
+  .icon-circle {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+  }
+
+  .project-card:hover .icon-circle {
+    transform: rotate(15deg) scale(1.1);
+  }
+
+  /* Card body text hover color */
+  .project-card h5, .project-card p {
+    transition: color 0.3s;
+  }
+
+  .project-card:hover h5 {
+    color: #ff7e5f;
+  }
+
+  .project-card:hover p {
+    color: #ff6f91;
+  }
+
+  /* Button hover effect */
+  .project-card .btn {
+    transition: transform 0.3s, background 0.3s;
+  }
+
+  .project-card .btn:hover {
+    transform: scale(1.1);
+  }
+</style>
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="py-5 text-white" style="background:#222;">
+  <div class="container text-center">
+    <h2 class="mb-4 animate__animated animate__fadeInUp">Contact Me</h2>
+    <form action="send_email.php" method="POST" class="mx-auto" style="max-width:500px;">
+  <div class="mb-3">
+    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+  </div>
+  <div class="mb-3">
+    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+  </div>
+  <div class="mb-3">
+    <textarea name="message" class="form-control" placeholder="Your Message" rows="4" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-warning">Send Message</button>
+</form>
+
+    <div class="mt-4">
+      <a href="https://linkedin.com/in/halima-akter-193a09389" class="text-warning mx-2">LinkedIn</a>
+      <a href="https://github.com/halimashemanto" class="text-warning mx-2">GitHub</a>
+      <!-- <a href="#" class="text-warning mx-2">Twitter</a> -->
+    </div>
+  </div>
+
+  
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
